@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -9,6 +10,10 @@ export default function Home() {
       </Head>
       <main style={{ padding: 24 }}>
         <h1>Hackathon 2!</h1>
+        <div style={{ marginTop: 16, display: 'flex', gap: 12 }}>
+          <Link href="/meetings">Meetings →</Link>
+          <Link href="/tasks">Tasks →</Link>
+        </div>
       </main>
     </>
   );

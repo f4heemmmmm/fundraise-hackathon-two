@@ -2,6 +2,8 @@ import cors from 'cors';
 import express, { Request, Response, NextFunction } from 'express';
 import dotenv from 'dotenv';
 import connectDB from './config/database';
+import meetingsRouter from './routes/meetings';
+import nylasWebhookRouter from './routes/webhooks';
 
 dotenv.config();
 
@@ -12,6 +14,8 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(meetingsRouter);
+app.use(nylasWebhookRouter);
 
 app.get('/', (req: Request, res: Response) => {
   res.json({ message: 'Welcome to the API' });
