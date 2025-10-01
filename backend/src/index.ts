@@ -1,11 +1,14 @@
 import cors from 'cors';
 import express, { Request, Response, NextFunction } from 'express';
 import dotenv from 'dotenv';
+import path from 'path';
 import connectDB from './config/database';
 import meetingsRouter from './routes/meetings';
 import nylasWebhookRouter from './routes/webhooks';
 
-dotenv.config();
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
+
+// Verify env loading
 
 const app = express();
 

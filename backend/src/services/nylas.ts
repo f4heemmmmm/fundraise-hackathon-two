@@ -1,9 +1,14 @@
-const apiKey = process.env.NYLAS_API_KEY;
+import dotenv from 'dotenv';
+import path from 'path';
+
+dotenv.config({ path: path.resolve(__dirname, '../../.env') });
+
+const apiKey = process.env.NYLAS_KEY;
 if (!apiKey) {
   console.warn('NYLAS_API_KEY is not set');
 }
 
-const NYLAS_API_BASE = 'https://api.nylas.com/v3';
+const NYLAS_API_BASE = 'https://api.us.nylas.com/v3';
 
 // Join a meeting with Notetaker using real Nylas API
 export async function ensureNotetakerJoinsMeeting(params: {
