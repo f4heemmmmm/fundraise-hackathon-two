@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { notetakerApi, NotetakerSession } from '@/lib/notetakerApi';
 
+
 export default function NotetakerDashboard() {
   const [sessions, setSessions] = useState<NotetakerSession[]>([]);
   const [loading, setLoading] = useState(true);
@@ -406,4 +407,3 @@ export default function NotetakerDashboard() {
     </>
   );
 }
-

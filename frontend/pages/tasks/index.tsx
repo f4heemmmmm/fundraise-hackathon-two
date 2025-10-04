@@ -1,9 +1,7 @@
 import Head from "next/head"
 import Navbar from "@/components/navbar"
-import { meetings } from "@/lib/meetingsData"
-import { MeetingCard } from "@/components/meetingCard"
 
-export default function Home() {
+export default function Tasks() {
     return (
         <>
             <Head>
@@ -19,15 +17,11 @@ export default function Home() {
                         <div className="min-h-screen bg-background">
                             <div className=" mx-auto px-6 py-12">
                                 <div className="mb-8">
-                                    <h1 className="text-8xl font-semibold text-foreground mb-2 text-balance tracking-tighter">Meeting Notes</h1>
-                                    <p className="text-muted-foreground">View and manage your meeting summaries and action items</p>
+                                    <h1 className="text-8xl font-semibold text-foreground mb-2 text-balance tracking-tighter">Tasks</h1>
+                                    <p className="text-muted-foreground ml-4">Organise your day, your way</p>
                                 </div>
 
-                                <div className="flex flex-col gap-4">
-                                    {meetings.map((meeting) => (
-                                        <MeetingCard key={meeting.id} meeting={meeting} />
-                                    ))}
-                                </div>
+
                             </div>
                         </div>
                     </section>
