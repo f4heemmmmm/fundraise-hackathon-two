@@ -1,115 +1,80 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Head from "next/head"
+import Link from "next/link"
 
 export default function Home() {
-  return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              pages/index.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+	return (
+		<>
+			<Head>
+				<title>Fundraise Hackathon 2</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+			</Head>
+			<main style={{ padding: 24, maxWidth: 800, margin: "0 auto" }}>
+				<h1 style={{ fontSize: 48, fontWeight: "bold", marginBottom: 16 }}>
+					Fundraise Hackathon 2
+				</h1>
+				<p style={{ fontSize: 18, color: "#666", marginBottom: 32 }}>
+					Nylas Notetaker Integration for Zoom Meetings
+				</p>
+
+				<div
+					style={{
+						backgroundColor: "white",
+						padding: 32,
+						borderRadius: 8,
+						boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+					}}
+				>
+					<h2 style={{ fontSize: 24, fontWeight: "bold", marginBottom: 16 }}>
+						Features
+					</h2>
+					<ul style={{ lineHeight: 2, marginBottom: 32 }}>
+						<li>✅ Invite Nylas Notetaker to Zoom meetings</li>
+						<li>✅ Automatic meeting transcription</li>
+						<li>✅ Audio recording</li>
+						<li>✅ Real-time webhook notifications</li>
+					</ul>
+
+					<Link href="/notetaker">
+						<button
+							style={{
+								padding: "16px 32px",
+								backgroundColor: "#0070f3",
+								color: "white",
+								border: "none",
+								borderRadius: 8,
+								fontSize: 18,
+								fontWeight: "bold",
+								cursor: "pointer",
+								width: "100%",
+							}}
+						>
+							Go to Notetaker Dashboard →
+						</button>
+					</Link>
+				</div>
+
+				<div
+					style={{
+						marginTop: 32,
+						padding: 24,
+						backgroundColor: "#f8f9fa",
+						borderRadius: 8,
+					}}
+				>
+					<h3 style={{ fontSize: 18, fontWeight: "bold", marginBottom: 12 }}>
+						Quick Start
+					</h3>
+					<ol style={{ lineHeight: 2, paddingLeft: 24 }}>
+						<li>Configure your Nylas API credentials in backend/.env</li>
+						<li>
+							Start the backend server: <code>cd backend && npm run dev</code>
+						</li>
+						<li>Click the button above to access the Notetaker Dashboard</li>
+						<li>Enter a Zoom meeting link and invite the notetaker</li>
+						<li>View transcripts after the meeting ends</li>
+					</ol>
+				</div>
+			</main>
+		</>
+	)
 }
