@@ -184,4 +184,3 @@ class NotetakerApi {
 }
 
 export const notetakerApi = new NotetakerApi();
-
