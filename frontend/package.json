@@ -9,6 +9,7 @@
     "translate-file": "tsx scripts/translate.ts --force --file"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^2.0.42",
     "@aws-sdk/client-translate": "^3.840.0",
     "@date-io/date-fns": "^2.14.0",
     "@dnd-kit/core": "^6.3.1",
@@ -36,6 +37,7 @@
     "@types/react-beautiful-dnd": "^13.1.2",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
+    "ai": "^5.0.60",
     "airtable": "^0.11.4",
     "autosuggest-highlight": "^3.3.4",
     "axios": "^0.26.1",
@@ -215,5 +217,3 @@
     "tsx": "^4.20.3"
   }
 }
-
-
